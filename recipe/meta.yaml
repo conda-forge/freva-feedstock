@@ -1,5 +1,5 @@
 {% set name = "freva" %}
-{% set version = "2206.0.10" %}
+{% set version = "2208.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
-  sha256: 69dfc11919c92a8a72c3c6efdba99a5ef731755907c954895da7f5221b20a315
+  sha256: b7a03de841359ac69c58e407157d6cb5d53a6fe4eb475c3d3455a02462f47b10
 
 build:
   entry_points:
@@ -16,7 +16,7 @@ build:
     - freva-esgf = freva.cli.esgf:main
     - freva-history = freva.cli.history:main
     - freva-plugin = freva.cli.plugin:main
-    - freva-crawl-my-data = freva.cli.crawl_my_data:main
+    - freva-user-data = freva.cli.user_data:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -43,7 +43,7 @@ requirements:
     - pandoc
     - pillow
     - pymysql
-    - pypdf2
+    - pypdf2 !=2.10.1
     - python >=3.7
     - requests
     - toml
@@ -62,7 +62,7 @@ test:
     - freva-esgf --help
     - freva-history --help
     - freva-plugin --help
-    - freva-crawl-my-data --help
+    - freva-user-data --help
   requires:
     - pip
 
