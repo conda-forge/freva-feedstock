@@ -1,5 +1,5 @@
 {% set name = "freva" %}
-{% set version = "2208.0.1" %}
+{% set version = "2208.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
-  sha256: b7a03de841359ac69c58e407157d6cb5d53a6fe4eb475c3d3455a02462f47b10
+  sha256: 0a42fa029d31a32f9491a23eda3f2c046daafdab18c1e16b7ba216dd81412dd9
 
 build:
   entry_points:
@@ -31,6 +31,7 @@ requirements:
     - backports.zoneinfo
     - dask-core
     - django
+    - ffmpeg
     - gitpython
     - git
     - h5netcdf
