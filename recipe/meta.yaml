@@ -19,7 +19,7 @@ build:
     - freva-user-data = freva.cli.user_data:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -28,7 +28,6 @@ requirements:
     - python >=3.7
   run:
     - appdirs
-    - backports.zoneinfo
     - dask-core
     - django
     - ffmpeg
