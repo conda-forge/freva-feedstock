@@ -1,5 +1,5 @@
 {% set name = "freva" %}
-{% set version = "2208.1.1" %}
+{% set version = "2303.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
-  sha256: 4dfcc59ba126ccf0b7d9aa2523d509455bcbf8d0c3525e0456b7ac1fe2f88f46
+  sha256: 379f4e1705086b4400d8b2c64dec990e83263b2bd3212cc93c64b5cf32525010
 
 build:
   entry_points:
@@ -19,7 +19,7 @@ build:
     - freva-user-data = freva.cli.user_data:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -70,7 +70,6 @@ test:
 about:
   home: https://pypi.org/project/freva/
   summary: Free Evaluation and Analysis Framework (Freva)
-  dev_url: https://gitlab.dkrz.de/freva/evaluation_system
   license: BSD-2-Clause
   license_file:
     - LICENSE.md
