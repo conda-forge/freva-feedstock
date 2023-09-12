@@ -1,5 +1,5 @@
 {% set name = "freva" %}
-{% set version = "2307.0.3" %}
+{% set version = "2309.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
-  sha256: 851285bf60b77252682793dc2ff3d182fe30404adaf68e41480df592ed4d4430
+  sha256: 6b16eb7be5126d65b5d249b7dfb1993ca37eba1bdf22f8be6f2e92cf910c8c06
 
 build:
   entry_points:
@@ -47,6 +47,7 @@ requirements:
     - pypdf2 !=2.10.1
     - python >=3.7
     - requests
+    - rich
     - toml
     - toolz
     - typing_extensions
@@ -70,6 +71,7 @@ test:
 about:
   home: https://pypi.org/project/freva/
   summary: Free Evaluation and Analysis Framework (Freva)
+  dev_url: https://github.com/FREVA-CLINT/freva
   license: BSD-2-Clause
   license_file:
     - LICENSE.md
