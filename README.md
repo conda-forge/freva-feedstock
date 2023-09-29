@@ -9,6 +9,8 @@ Package license: BSD-2-Clause
 
 Summary: Free Evaluation and Analysis Framework (Freva)
 
+Development: https://github.com/FREVA-CLINT/freva
+
 Current build status
 ====================
 
