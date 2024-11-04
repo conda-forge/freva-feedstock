@@ -1,13 +1,12 @@
 {% set name = "freva" %}
-{% set version = "2406.0.1" %}
-
+{% set version = "2410.0.0" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
-  sha256: 63346432081bd72327aa9991b1f18d872ed67f08ef13bd3878fbc1049c8b3783
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
+  sha256: 1d49bda8c7999a5b81f146f87a7ba82774f7004f50ed44791504471723af130c
 
 build:
   entry_points:
@@ -18,36 +17,38 @@ build:
     - freva-plugin = freva.cli.plugin:main
     - freva-user-data = freva.cli.user_data:main
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
+    - python >=3.7
     - appdirs
     - pip
-    - python >=3.7
+    - setuptools
   run:
+    - python >=3.7
     - appdirs
+    - gitpython
     - dask-core
     - django
+    - humanize
     - ffmpeg
-    - gitpython
     - git
     - h5netcdf
-    - humanize
     - lazy_import
-    - metadata-inspector
     - mysqlclient
+    - metadata-inspector
     - netcdf4
     - numpy
+    - pymysql
     - pandas
     - pandoc
     - pillow
-    - pymysql
     - pypdf2 !=2.10.1
-    - python >=3.7
     - requests
     - rich
+    - setuptools
     - toml
     - toolz
     - typing_extensions
@@ -69,12 +70,10 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/freva/
   summary: Free Evaluation and Analysis Framework (Freva)
-  dev_url: https://github.com/FREVA-CLINT/freva
+  home: https://github.com/FREVA-CLINT/freva
   license: BSD-2-Clause
-  license_file:
-    - LICENSE.md
+  license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
