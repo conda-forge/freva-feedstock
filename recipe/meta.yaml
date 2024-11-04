@@ -1,6 +1,5 @@
 {% set name = "freva" %}
 {% set version = "2410.0.0" %}
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
