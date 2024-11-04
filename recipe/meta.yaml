@@ -25,6 +25,7 @@ requirements:
     - python >=3.7
     - appdirs
     - pip
+    - setuptools
   run:
     - python >=3.7
     - appdirs
@@ -70,7 +71,7 @@ test:
 
 about:
   summary: Free Evaluation and Analysis Framework (Freva)
-  dev_url: https://github.com/FREVA-CLINT/freva
+  home: https://github.com/FREVA-CLINT/freva
   license: BSD-2-Clause
   license_file: LICENSE.md
 
