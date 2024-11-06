@@ -18,7 +18,7 @@ build:
     - freva-user-data = freva.cli.user_data:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -37,7 +37,7 @@ requirements:
     - git
     - h5netcdf
     - lazy_import
-    - mysqlclient
+    - 'mysql-client!=9'
     - metadata-inspector
     - netcdf4
     - numpy
