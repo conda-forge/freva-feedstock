@@ -1,3 +1,4 @@
+{% set python_min = "3.9" %}
 {% set name = "freva" %}
 {% set version = "2410.0.0" %}
 package:
@@ -18,16 +19,16 @@ build:
     - freva-user-data = freva.cli.user_data:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python >={{ python_min }}
     - appdirs
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - appdirs
     - gitpython
     - dask-core
@@ -37,6 +38,7 @@ requirements:
     - git
     - h5netcdf
     - lazy_import
+    - mysql-client <9
     - mysqlclient
     - metadata-inspector
     - netcdf4
@@ -67,6 +69,7 @@ test:
     - freva-plugin --help
     - freva-user-data --help
   requires:
+    - python >={{ python_min }}
     - pip
 
 about:
@@ -78,3 +81,4 @@ about:
 extra:
   recipe-maintainers:
     - antarcticrainforest
+    - mo-dkrz
