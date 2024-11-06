@@ -39,6 +39,7 @@ requirements:
     - h5netcdf
     - lazy_import
     - mysql-client <9
+    - mysqlclient
     - metadata-inspector
     - netcdf4
     - numpy
