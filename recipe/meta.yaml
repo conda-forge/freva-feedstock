@@ -68,6 +68,7 @@ test:
     - freva-plugin --help
     - freva-user-data --help
   requires:
+    - python >={{ python_min }}
     - pip
 
 about:
