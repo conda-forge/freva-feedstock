@@ -37,7 +37,7 @@ requirements:
     - git
     - h5netcdf
     - lazy_import
-    - 'mysql-client!=9'
+    - mysql-client <9
     - metadata-inspector
     - netcdf4
     - numpy
@@ -78,3 +78,4 @@ about:
 extra:
   recipe-maintainers:
     - antarcticrainforest
+    - mo-dkrz
