@@ -1,3 +1,4 @@
+{% set python_min = "3.9" %}
 {% set name = "freva" %}
 {% set version = "2410.0.0" %}
 package:
@@ -22,12 +23,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >={{ python_min }}
     - appdirs
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - appdirs
     - gitpython
     - dask-core
