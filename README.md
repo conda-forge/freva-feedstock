@@ -3,13 +3,11 @@ About freva-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/freva-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pypi.org/project/freva/
+Home: https://github.com/FREVA-CLINT/freva
 
 Package license: BSD-2-Clause
 
 Summary: Free Evaluation and Analysis Framework (Freva)
-
-Development: https://github.com/FREVA-CLINT/freva
 
 Current build status
 ====================
@@ -146,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@antarcticrainforest](https://github.com/antarcticrainforest/)
+* [@mo-dkrz](https://github.com/mo-dkrz/)
 
