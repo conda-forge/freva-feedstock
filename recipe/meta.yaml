@@ -1,13 +1,13 @@
 {% set python_min = "3.9" %}
 {% set name = "freva" %}
-{% set version = "2502.0.0" %}
+{% set version = "2502.0.1" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
-  sha256: bee8ed1605de3a2edebc5573cef0a7337b0aeb9f6cbd1de90a983e330d1f4989
+  sha256: 1e0d2ede78d1c1f7de2a551e0e725a56a59d1ff24ca0bf9241bbe832dac7b317
 
 build:
   entry_points:
@@ -19,7 +19,7 @@ build:
     - freva-user-data = freva.cli.user_data:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
