@@ -19,7 +19,7 @@ build:
     - freva-user-data = freva.cli.user_data:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -45,7 +45,6 @@ requirements:
     - numpy
     - pymysql
     - pandas
-    - pandoc
     - pillow
     - pypdf2 !=2.10.1
     - requests
