@@ -1,6 +1,6 @@
-{% set python_min = "3.9" %}
 {% set name = "freva" %}
 {% set version = "2504.0.0" %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -23,7 +23,7 @@ build:
 
 requirements:
   host:
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - appdirs
     - pip
     - setuptools
@@ -67,7 +67,7 @@ test:
     - freva-plugin --help
     - freva-user-data --help
   requires:
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - pip
 
 about:
