@@ -1,5 +1,5 @@
 {% set name = "freva" %}
-{% set version = "2504.0.0" %}
+{% set version = "2506.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
-  sha256: e6129e02088f7740024103989e137ee894748dd226a2d2f3f78217c4e154abf3
+  sha256: 2001d6865b212bfdcf5b45ea649219ef2091fc79fbb5d5ddde9a0514f0e2f350
 
 build:
   entry_points:
@@ -19,7 +19,7 @@ build:
     - freva-user-data = freva.cli.user_data:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
