@@ -1,5 +1,5 @@
 {% set name = "freva" %}
-{% set version = "2506.0.0" %}
+{% set version = "2506.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/freva-{{ version }}.tar.gz
-  sha256: 2001d6865b212bfdcf5b45ea649219ef2091fc79fbb5d5ddde9a0514f0e2f350
+  sha256: 10f5c3cfa9e3010826fc3f7e1423e88e8e2ad62fc28a64c956a1feaa65d2699f
 
 build:
   entry_points:
